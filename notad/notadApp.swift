@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import SwiftData
 
 @main
 struct notadApp: App {
@@ -13,5 +14,6 @@ struct notadApp: App {
         WindowGroup {
             ContentView()
         }
+        .modelContainer(for: Receipt.self)
     }
 }

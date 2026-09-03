@@ -6,8 +6,19 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXContainerItemProxy section */
+		CE4EFE6A30491F5000B4555C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CE0A2D6C30486E9600DFCDF0 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CE0A2D7330486E9600DFCDF0;
+			remoteInfo = notad;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
 		CE0A2D7430486E9600DFCDF0 /* notad.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = notad.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		CE4EFE6630491F5000B4555C /* notadTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = notadTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
@@ -16,10 +27,22 @@
 			path = notad;
 			sourceTree = "<group>";
 		};
+		CE4EFE6730491F5000B4555C /* notadTests */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = notadTests;
+			sourceTree = "<group>";
+		};
 /* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		CE0A2D7130486E9600DFCDF0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CE4EFE6330491F5000B4555C /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -33,6 +56,7 @@
 			isa = PBXGroup;
 			children = (
 				CE0A2D7630486E9600DFCDF0 /* notad */,
+				CE4EFE6730491F5000B4555C /* notadTests */,
 				CE0A2D7530486E9600DFCDF0 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -41,6 +65,7 @@
 			isa = PBXGroup;
 			children = (
 				CE0A2D7430486E9600DFCDF0 /* notad.app */,
+				CE4EFE6630491F5000B4555C /* notadTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -70,6 +95,29 @@
 			productReference = CE0A2D7430486E9600DFCDF0 /* notad.app */;
 			productType = "com.apple.product-type.application";
 		};
+		CE4EFE6530491F5000B4555C /* notadTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CE4EFE6C30491F5000B4555C /* Build configuration list for PBXNativeTarget "notadTests" */;
+			buildPhases = (
+				CE4EFE6230491F5000B4555C /* Sources */,
+				CE4EFE6330491F5000B4555C /* Frameworks */,
+				CE4EFE6430491F5000B4555C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				CE4EFE6B30491F5000B4555C /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				CE4EFE6730491F5000B4555C /* notadTests */,
+			);
+			name = notadTests;
+			packageProductDependencies = (
+			);
+			productName = notadTests;
+			productReference = CE4EFE6630491F5000B4555C /* notadTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -82,6 +130,10 @@
 				TargetAttributes = {
 					CE0A2D7330486E9600DFCDF0 = {
 						CreatedOnToolsVersion = 26.1.1;
+					};
+					CE4EFE6530491F5000B4555C = {
+						CreatedOnToolsVersion = 26.1.1;
+						TestTargetID = CE0A2D7330486E9600DFCDF0;
 					};
 				};
 			};
@@ -100,12 +152,20 @@
 			projectRoot = "";
 			targets = (
 				CE0A2D7330486E9600DFCDF0 /* notad */,
+				CE4EFE6530491F5000B4555C /* notadTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
 		CE0A2D7230486E9600DFCDF0 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CE4EFE6430491F5000B4555C /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -122,7 +182,22 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		CE4EFE6230491F5000B4555C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		CE4EFE6B30491F5000B4555C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = CE0A2D7330486E9600DFCDF0 /* notad */;
+			targetProxy = CE4EFE6A30491F5000B4555C /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		CE0A2D7D30486E9800DFCDF0 /* Debug */ = {
@@ -306,6 +381,46 @@
 			};
 			name = Release;
 		};
+		CE4EFE6D30491F5000B4555C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = artomily.notadTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRING_CATALOG_GENERATE_SYMBOLS = NO;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/notad.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/notad";
+			};
+			name = Debug;
+		};
+		CE4EFE6E30491F5000B4555C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = artomily.notadTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRING_CATALOG_GENERATE_SYMBOLS = NO;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/notad.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/notad";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -323,6 +438,15 @@
 			buildConfigurations = (
 				CE0A2D8030486E9800DFCDF0 /* Debug */,
 				CE0A2D8130486E9800DFCDF0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CE4EFE6C30491F5000B4555C /* Build configuration list for PBXNativeTarget "notadTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CE4EFE6D30491F5000B4555C /* Debug */,
+				CE4EFE6E30491F5000B4555C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
