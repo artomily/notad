@@ -15,7 +15,16 @@ struct ContentView: View {
     var body: some View {
         NavigationStack{
             List{
-                ForEach(receipts){ receipt in
+                Section {
+                    MonthlyTotalCard(total: monthlyTotal, count: receipts.count)
+                        .listRowInsets(EdgeInsets())
+                        .listRowBackground(Color.clear)
+                        .listRowSeparator(.hidden)
+                }
+            ForEach(receipts){ receipt in
+                NavigationLink{
+                    ReceiptDetailView(receipt: receipt)
+                } label : {
                     HStack{
                         VStack(alignment: .leading){
                             Text(receipt.merchant)
@@ -27,23 +36,31 @@ struct ContentView: View {
                         Text(receipt.total, format: .currency(code: "IDR").precision(.fractionLength(0)))
                     }
                 }
-                .onDelete(perform: delete)
             }
-            .navigationTitle(Text("Notad"))
-            .toolbar{
-                Button("Tambah", systemImage: "plus", action: addDummy)
-            }
+            .onDelete(perform: delete)
+        }
+        .navigationTitle(Text("Notad"))
+        .toolbar{
+            Button("Tambah", systemImage: "plus", action: addDummy)
         }
     }
-    private func addDummy(){
-        let receipt = Receipt(merchant: "INDOMARET", total: 39_500, date: .now)
-               context.insert(receipt)
+}
+private var monthlyTotal: Int {
+    let calendar = Calendar.current
+    return receipts
+        .filter { calendar.isDate($0.date, equalTo: .now, toGranularity: .month) }
+        .reduce(0) { $0 + $1.total }
+}
+
+private func addDummy(){
+    let receipt = Receipt(merchant: "INDOMARET", total: 39_500, date: .now)
+    context.insert(receipt)
+}
+private func delete(at offsets: IndexSet) {
+    for index in offsets {
+        context.delete(receipts[index])
     }
-    private func delete(at offsets: IndexSet) {
-            for index in offsets {
-                context.delete(receipts[index])
-            }
-    }
+}
 }
 
 #Preview {
